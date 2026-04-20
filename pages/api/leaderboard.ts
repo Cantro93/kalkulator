@@ -1,8 +1,11 @@
 // leaderboard.ts
-import { NextApiRequest, NextApiResponse } from 'next';
 
-const leaderboard = (req: NextApiRequest, res: NextApiResponse) => {
-  // Logic for leaderboard API
-};
+const scores = [];
 
-export default leaderboard;
+export function addScore(playerName, score) {
+    scores.push({ playerName, score });
+}
+
+export function getLeaderboard() {
+    return scores.sort((a, b) => b.score - a.score);
+}
