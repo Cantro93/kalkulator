@@ -1,0 +1,9 @@
+# Railway Deployment Configuration
+
+This file defines the Railway project configuration.
+
+[build]
+  command = "npm install && npm run build"
+
+[deploy]
+  command = "npm start"
